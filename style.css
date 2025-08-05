@@ -134,8 +134,7 @@ header {
   background-image: url('images/header.jpg');
   background-position: top;
   background-size: cover;
-  background-attachment: scroll;
-  max-height: 1080px;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
