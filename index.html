@@ -45,7 +45,7 @@
                 <p class="up">HI!</p><br>
                 <p class="down">I am Dhanush</p>
             </h1>
-            <h1>I'm into<span class="auto-type"></span></h1>
+            <h1>I'm into -<span class="auto-type"></span></h1>
             <div class="botton">
                 <a href="https://www.linkedin.com/in/neo-dhanush-766991327/" target="_blank"><img src="images/linkedin.svg" alt=""></a>
                 <a href="https://github.com/NEO-D-2004" target="_blank"><img src="images/github.svg" alt=""></a>
@@ -332,7 +332,7 @@ FOCAL-POINT-STUDIO is a professional photography booking website designed to str
                 </div>
             </div>
             <div class="contact-form">
-                <form action="#">
+                <form action="#" id="contact-form" >
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -389,8 +389,27 @@ FOCAL-POINT-STUDIO is a professional photography booking website designed to str
             loop: true
         });
     </script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("template_ryj95x9"); // from EmailJS dashboard
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_c2ks5y7', 'template_ryj95x9', this)
+      .then(function() {
+        alert('Message sent successfully!');
+      }, function(error) {
+        alert('Sending failed: ' + error);
+      });
+  });
+</script>
 </body>
 
 </html>
+
 
 
