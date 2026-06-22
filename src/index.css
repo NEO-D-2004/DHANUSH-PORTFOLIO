@@ -24,6 +24,14 @@ html, body, #root {
   -webkit-text-fill-color: transparent;
 }
 
+.hero-heading-animated {
+  background: linear-gradient(123deg, #B600A8 10%, #7621B0 50%, #BE4C00 90%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+}
+
 .portrait-shadow {
   filter: drop-shadow(0 0 50px rgba(187, 204, 215, 0.15));
 }
@@ -32,3 +40,25 @@ html, body, #root {
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-text {
+  background-size: 200% auto;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+

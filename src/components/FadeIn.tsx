@@ -1,3 +1,4 @@
+import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
 import { FadeInProps } from '../types';
 
@@ -10,8 +11,8 @@ export default function FadeIn({
   className = '',
   as = 'div'
 }: FadeInProps) {
-  // motion.create dynamically builds the component for standard or custom tags
-  const Component = motion.create(as as any);
+  // Memoize the dynamic motion component to prevent unmounting/remounting on parent re-renders
+  const Component = useMemo(() => motion.create(as as any), [as]);
 
   return (
     <Component
