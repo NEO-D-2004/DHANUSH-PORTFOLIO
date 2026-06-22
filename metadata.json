@@ -1,0 +1,6 @@
+{
+  "name": "Dhanush Portfolio",
+  "description": "3D Creator and Software Developer Portfolio landing page for Dhanush",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
